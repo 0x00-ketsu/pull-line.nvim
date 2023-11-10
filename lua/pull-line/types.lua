@@ -7,10 +7,6 @@
 ---@class Config
 ---@field popup Config.popup
 
----@class Config.api
----@field copy fun(direction: DIRECTIONS?)
----@field move fun(direction: DIRECTIONS?)
-
 ---@class Config.popup
 ---@field text Config.popup.text
 ---@field prompt Config.popup.prompt
