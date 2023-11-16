@@ -5,14 +5,17 @@ local M = {}
 
 ---Render an input box
 ---
+---@param relative string|table
+---@param position number|string|table
 ---@param text string text of input box
 ---@param prompt string text of prompt
 ---@param cb_submit fun(value: string) callback on submit
-M.render = function(text, prompt, cb_submit)
+M.render = function(relative, position, text, prompt, cb_submit)
   -- LuaFormatter off
   local input = Input(
       {
-        position = '50%',
+        relative = relative,
+        position = position,
         size = {width = 30},
         border = {
           style = 'rounded',

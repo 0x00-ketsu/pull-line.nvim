@@ -8,6 +8,8 @@
 ---@field popup Config.popup
 
 ---@class Config.popup
+---@field relative string|table
+---@field position number|string|table
 ---@field text Config.popup.text
 ---@field prompt Config.popup.prompt
 
@@ -29,5 +31,7 @@
 ---@field popup Line.popup
 
 ---@class Line.popup
+---@field relative string|table
+---@field position number|string|table
 ---@field text string
 ---@field prompt string
