@@ -1,6 +1,8 @@
 ---@type Config
 local defaults = {
   popup = {
+    relative = 'editor',
+    position = '50%',
     text = {
       copy = ' Copy Lines ',
       move = ' Move Lines '

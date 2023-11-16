@@ -46,6 +46,8 @@ Following defaults:
 ```lua
 require('pull-line').setup {
   popup = {
+    relative = 'editor',
+    position = '50%',
     text = {
       copy = ' Copy Lines ',
       move = ' Move Lines '
@@ -57,6 +59,16 @@ require('pull-line').setup {
   }
 }
 ```
+
+### Configuration
+
+- `popup.relative`
+
+    See [nui.nvim relative](https://github.com/MunifTanjim/nui.nvim/blob/main/lua/nui/layout/README.md#relative)
+
+- `popup.position`
+
+    See [nui.nvim position](https://github.com/MunifTanjim/nui.nvim/blob/main/lua/nui/layout/README.md#position)
 
 ## API
 
