@@ -5,17 +5,17 @@ local defaults = {
     position = '50%',
     text = {
       copy = ' Copy Lines ',
-      move = ' Move Lines ',
+      move = ' Move Lines '
     },
     prompt = {
       above = '  ',
-      below = '  ',
-    },
-  },
+      below = '  '
+    }
+  }
 }
 
 ---@class Config
-local M = { plugin_name = 'pull-line.nvim' }
+local M = {plugin_name = 'pull-line.nvim'}
 
 ---@type Config?
 M.opts = nil
@@ -27,6 +27,6 @@ M.setup = function(opts)
   M.opts = vim.tbl_deep_extend('force', {}, defaults, opts or {})
 end
 
-M.setup({})
+M.setup {}
 
 return M

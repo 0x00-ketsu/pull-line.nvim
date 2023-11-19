@@ -13,7 +13,7 @@ package.loaded['pull-line.popup'] = nil
 package.loaded['pull-line.notify'] = nil
 
 -- keymaps for develop nvim plugin
-vim.api.nvim_set_keymap('n', 'dr', ':luafile dev/init.lua<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'dr', ':luafile dev/init.lua<CR>', {noremap = true})
 
 testcase = require('dev.tests')
-vim.api.nvim_set_keymap('n', 'de', ':lua testcase.execute()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'de', ':lua testcase.execute()<CR>', {noremap = true})
