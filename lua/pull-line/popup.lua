@@ -12,43 +12,36 @@ local M = {}
 ---@param cb_submit fun(value: string) callback on submit
 M.render = function(relative, position, text, prompt, cb_submit)
   -- LuaFormatter off
-  local input = Input(
-      {
-        relative = relative,
-        position = position,
-        size = {width = 30},
-        border = {
-          style = 'rounded',
-          text = {
-            top = text,
-            top_align = 'center'
-          }
-        },
-        win_options = {
-          winhighlight = 'Normal:Normal,FloatBorder:Normal'
-        }
+  local input = Input({
+    relative = relative,
+    position = position,
+    size = { width = 30 },
+    border = {
+      style = 'rounded',
+      text = {
+        top = text,
+        top_align = 'center',
       },
-      {
-        prompt = prompt,
-        on_submit = cb_submit,
-      }
-  )
+    },
+    win_options = {
+      winhighlight = 'Normal:Normal,FloatBorder:Normal',
+    },
+  }, {
+    prompt = prompt,
+    on_submit = cb_submit,
+  })
   -- LuaFormatter on
 
   -- mount/open the component
   input:mount()
   -- unmount component when cursor leaves buffer
-  input:on(
-      event.BufLeave, function()
-        input:unmount()
-      end
-  )
+  input:on(event.BufLeave, function()
+    input:unmount()
+  end)
   -- unmount input by pressing `<Esc>` in normal mode
-  input:map(
-      'n', '<Esc>', function()
-        input:unmount()
-      end, {noremap = true}
-  )
+  input:map('n', '<Esc>', function()
+    input:unmount()
+  end, { noremap = true })
 end
 
 return M
